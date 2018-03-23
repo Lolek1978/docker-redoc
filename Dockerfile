@@ -10,3 +10,6 @@ RUN chmod -R g+rwX /var/cache/nginx/client_temp
 USER 333
 CMD ["/run.sh"]
 COPY . /usr/share/nginx/html/
+USER 1001
+
+CMD ["nginx", "-g", "daemon off;"]
