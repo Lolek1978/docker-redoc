@@ -5,7 +5,6 @@ ENV REDOC_OPTIONS=
 COPY run.sh /run.sh
 RUN chgrp -R 0 /usr/share/nginx/html 
 RUN chmod -R g+rwX /usr/share/nginx/html
-USER 333
 CMD ["/run.sh"]
 COPY . /usr/share/nginx/html/
 RUN mkdir -p /var/cache/nginx/client_temp
